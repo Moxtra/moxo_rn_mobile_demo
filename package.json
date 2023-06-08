@@ -10,6 +10,8 @@
     "test": "jest"
   },
   "dependencies": {
+    "@rneui/base": "^0.0.0-edge.2",
+    "@rneui/themed": "^0.0.0-edge.2",
     "react": "18.2.0",
     "react-native": "0.71.8"
   },

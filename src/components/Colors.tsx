@@ -6,4 +6,5 @@ export default {
     dark: '#444',
     darker: '#222',
     black: '#000',
+    branding: '#658CD8',
 };  

@@ -18,7 +18,7 @@ import {
 import { FAB, Image } from '@rneui/themed';
 import Colors from './src/components/Colors';
 import * as moxo from '@moxtradeveloper/react-native-moxo-module';
-import { DOMAIN, CLIENT_ID, CLIENT_SECRET, ORG_ID, EMAIL } from '@env'
+import { DOMAIN, CLIENT_ID, CLIENT_SECRET, ORG_ID, EMAIL, UNIQUE_ID } from '@env'
 
 function App(): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
@@ -37,18 +37,23 @@ function App(): JSX.Element {
     moxo.setup(DOMAIN)
     // Get access token
     setIsLoading(true)
+    var payload = {
+      'client_id': CLIENT_ID,
+      'client_secret': CLIENT_SECRET,
+      'org_id': ORG_ID,
+    }
+    if (UNIQUE_ID !== undefined) {
+      Object.assign(payload, {'unique_id': UNIQUE_ID})
+    } else {
+      Object.assign(payload, {'email': EMAIL})
+    }
     const response = await fetch('https://' + DOMAIN + '/v1/core/oauth/token', {
       method: 'POST',
       headers: {
           Accept: 'application/json',
           'Content-Type': 'application/json'
      },
-      body: JSON.stringify({
-        'client_id': CLIENT_ID,
-        'client_secret': CLIENT_SECRET,
-        'org_id': ORG_ID,
-        'email': EMAIL
-      })
+      body: JSON.stringify(payload)
     })
     const json = await response.json();
     const token = json.access_token

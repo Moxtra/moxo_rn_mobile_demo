@@ -39,10 +39,12 @@ By default, this project is using EMAIL. If you prefer UNIQUE_ID, please assign 
 
 3. When dependencies are ready, run below command to run app:
 
+For iOS:
 ```
-npx react-native run-ios
+bundle install
+cd ios && pod install && cd ../ && npx react-native run-ios
 ```
-or 
+or for Android:
 ```
 npx react-native run-android
 ```

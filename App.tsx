@@ -54,7 +54,7 @@ function App(): JSX.Element {
     const token = json.access_token
 
     //Login and show moxo engagement platform window
-    moxo.link(DOMAIN).then((result: boolean)=>{
+    moxo.link(token).then((result: boolean)=>{
       setIsLoading(false);
       if (result)
         setIsMoxoLogined(true);

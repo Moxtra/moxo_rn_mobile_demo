@@ -22,7 +22,7 @@ A flutter demo app based on [react-native-moxo-module](https://github.com/Moxtra
 npm install
 ```
 
-1. Add Moxo environment details to .env file in root directory of the project. For example:
+2. Add Moxo environment details to .env file in root directory of the project. For example:
 
 ```
 DOMAIN=YOUR_DOMAIN

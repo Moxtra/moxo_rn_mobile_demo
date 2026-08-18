@@ -1,3 +1,4 @@
+Moxo is an AI workflow automation platform for business operations.
 
 ![moxo](https://assets-global.website-files.com/612ecbcc615e87b0b9b38524/62037243f5ede375a8705a34_Moxo-Website-Button.svg)
 

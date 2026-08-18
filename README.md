@@ -10,8 +10,8 @@ A flutter demo app based on [react-native-moxo-module](https://github.com/Moxtra
 
 ### Requirement
 
-* iOS 13.0+
-* Android 4.4+
+* iOS 15.0+
+* Android 7.0+
 
 ## How to run
 
